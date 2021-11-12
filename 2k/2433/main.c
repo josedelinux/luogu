@@ -32,7 +32,10 @@ main ()
       printf ("110\n90\n0");
       break;
     case 8:
-      printf ("%f\n%f\n%f\n", pi * 5 * 2, pi * 5 * 5, 4 / 3 * pi * 125);
+      printf ("%f\n%f\n%f\n", pi * 5 * 2, pi * 5 * 5, 4 / 3.0 * pi * 125);
+      break;
+    case 9:
+      printf ("%d\n", ((((1 + 1) * 2) + 1 * 2) + 1) * 2);
     default:
       break;
     }
