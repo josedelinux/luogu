@@ -50,8 +50,9 @@ main ()
       printf ("%d\n%c\n", 'M' - 'A', 'A' + 18 - 1);
       break;
     case 13:
-      printf ("%f\n",
-              pow (4 / 3 * pi * (4 * 4 * 4 + 10 * 10 * 10), 1.0 * 1 / 3));
+      printf ("14\n");
+      // printf ("%f\n",
+      //         pow (4 / 3 * pi * (4 * 4 * 4 + 10 * 10 * 10), 1.0 * 1 / 3));
       break;
     case 14:
       printf ("%d\n", 50);
