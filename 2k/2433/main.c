@@ -5,7 +5,7 @@ int
 main ()
 {
   int T;
-  const double pi = acos (-1);
+  const double pi = 3.141593;
   scanf ("%d", &T);
 
   switch (T)
@@ -17,17 +17,18 @@ main ()
       printf ("%d %d\n", 2 + 4, 10 - 2 - 4);
       break;
     case 3:
-      printf ("%d\n%d\n%d\n", 14 / 4, 14 - 14 / 4);
+      printf ("%d\n%d\n%d\n", 14 / 4, 4 * (14 / 4), 14 % 3);
       break;
     case 4:
-      printf ("%3f\n", 500 / 3.0);
+      printf ("%.3f\n", 500 / 3.0);
       break;
     case 5:
       printf ("%d\n", (220 + 260) / (20 + 12));
       break;
     case 6:
       // cout<<sqrt(6*6+9*9);
-      printf ("10.8167\n");
+      printf ("%f\n", sqrt (6 * 6 + 9 * 9));
+      break;
     case 7:
       printf ("110\n90\n0");
       break;
@@ -36,6 +37,25 @@ main ()
       break;
     case 9:
       printf ("%d\n", ((((1 + 1) * 2) + 1 * 2) + 1) * 2);
+      break;
+    case 10:
+      printf ("9\n");
+      break;
+    case 11:
+      printf ("33.3333\n");
+      // fuck cpp
+      // printf ("%f\n", 100 / 3.0);
+      break;
+    case 12:
+      printf ("%d\n%c\n", 'M' - 'A', 'A' + 18 - 1);
+      break;
+    case 13:
+      printf ("%f\n",
+              pow (4 / 3 * pi * (4 * 4 * 4 + 10 * 10 * 10), 1.0 * 1 / 3));
+      break;
+    case 14:
+      printf ("%d\n", 50);
+      break;
     default:
       break;
     }
