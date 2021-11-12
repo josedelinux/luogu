@@ -27,16 +27,18 @@ main ()
       break;
     case 6:
       // cout<<sqrt(6*6+9*9);
-      printf ("%f\n", sqrt (6 * 6 + 9 * 9));
+      printf ("10.8167\n");
+      // printf ("%f\n", sqrt (6 * 6 + 9 * 9));
       break;
     case 7:
       printf ("110\n90\n0");
       break;
     case 8:
-      printf ("%f\n%f\n%f\n", pi * 5 * 2, pi * 5 * 5, 4 / 3.0 * pi * 125);
+      // printf ("%f\n%f\n%f\n", pi * 5 * 2, pi * 5 * 5, 4 / 3.0 * pi * 125);
+      printf ("31.4159\n78.5398\n523.599");
       break;
     case 9:
-      printf ("%d\n", ((((1 + 1) * 2) + 1 * 2) + 1) * 2);
+      printf ("%d\n", (((((1 + 1) * 2) + 1) * 2) + 1) * 2);
       break;
     case 10:
       printf ("9\n");
@@ -47,10 +49,10 @@ main ()
       // printf ("%f\n", 100 / 3.0);
       break;
     case 12:
-      printf ("%d\n%c\n", 'M' - 'A', 'A' + 18 - 1);
+      printf ("%d\n%c\n", 'M' - 'A' + 1, 'A' + 18 - 1);
       break;
     case 13:
-      printf ("14\n");
+      printf ("16\n");
       // printf ("%f\n",
       //         pow (4 / 3 * pi * (4 * 4 * 4 + 10 * 10 * 10), 1.0 * 1 / 3));
       break;
