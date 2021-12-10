@@ -5,10 +5,12 @@ int
 main ()
 {
 
-  int a, b, c;
+  int a[4];
 
-  scanf ("%d%d%d", &a, &b, &c);
-  printf ("%d %d %d\n", a, b, c);
+  scanf ("%d%d%d", &a[0], &a[1], (a + 2));
+  //左闭右开
+  sort (a, a + 3);
+  printf ("%d %d %d\n", *a, a[1], *(a + 2));
 
   return 0;
 }
