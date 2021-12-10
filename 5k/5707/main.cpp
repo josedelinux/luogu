@@ -1,20 +1,39 @@
 #include <bits/stdc++.h>
+#define AHORA 8
 
 using namespace std;
 
 int
 main ()
 {
-  int h, m, s, v;
+  int h, m, s, v, mdiff, hdiff;
   scanf ("%d%d", &s, &v);
 
-  // debug
-  // printf ("%d\n", ceil (s / float (v)));
+  mdiff = (10 + ceil (s / float (v)));
 
-  // int mdiff = (m2 + 120 - m1) % 60;
-  int mdiff = (10 + ceil (s / float (v)));
-  m = (120 - mdiff) % 60;
-  int hdiff = (mdiff / 60) + 1;
-  h = 8;
-  printf ("%02d:%02d\n", h - hdiff, m);
+#ifdef DEBUG
+  printf ("Debug:%d minutes\n", mdiff);
+#endif
+
+  if (mdiff < 60 * 8)
+    {
+      // that day exactly
+      m = (60 * 25 - mdiff) % 60;
+    }
+  else if (mdiff == 480)
+    {
+      printf ("%02d:%02d\n", 0, 0);
+      return 0;
+    }
+  else
+    {
+      // the day before
+      m = (60 * 25 - mdiff) % 60;
+    }
+
+  hdiff = (mdiff / 60) + 1;
+  // remove negative hours h
+  int hvdd = (AHORA - hdiff + 48) % 24;
+
+  printf ("%02d:%02d\n", hvdd, m);
 }
