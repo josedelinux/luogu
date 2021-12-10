@@ -16,9 +16,9 @@ ligit (int x)
 int
 main ()
 {
-  // property
   int x;
   scanf ("%d", &x);
   printf ("%d %d %d %d\n", is_even (x) && ligit (x), is_even (x) || ligit (x),
           is_even (x) ^ ligit (x), !is_even (x) && !ligit (x));
+  return 0;
 }
