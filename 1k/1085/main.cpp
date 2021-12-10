@@ -10,7 +10,7 @@ int main() {
     if (sum != max && sum >= 8) {
       if (sum >= max) {
         max = sum;
-        ans = i - 1;
+        ans = i + 1;
       }
     }
   }
