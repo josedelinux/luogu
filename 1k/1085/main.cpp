@@ -7,7 +7,7 @@ int main() {
   for (int i = 0; i < 7; i++) {
     scanf("%d %d", &a, &b);
     int sum = a + b;
-    if (sum != max && sum >= 8) {
+    if (sum != max && sum > 8) {
       if (sum >= max) {
         max = sum;
         ans = i + 1;
