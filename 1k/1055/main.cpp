@@ -2,14 +2,16 @@
 using namespace std;
 
 int main() {
-  char s[14];
+  char s[14], given;
 
   // check digits
-  int given, m_check = 0;
+  int m_check = 0;
 
   scanf("%c-%c%c%c-%c%c%c%c%c-%c", &s[1], &s[2], &s[3], &s[4], &s[5], &s[6],
         &s[7], &s[8], &s[9], &given);
-
+  if (given == 'X') {
+    given = 10 + '0';
+  }
   for (int i = 1; i <= 9; i++) {
     m_check = m_check + i * (s[i] - '0');
   }
