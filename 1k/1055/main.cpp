@@ -18,8 +18,8 @@ int main() {
     printf("Right\n");
     return 0;
   } else {
-    printf("%c-%c%c%c-%c%c%c%c%c-%d\n", s[1], s[2], s[3], s[4], s[5], s[6],
-           s[7], s[8], s[9], m_check);
+    printf("%c-%c%c%c-%c%c%c%c%c-%c\n", s[1], s[2], s[3], s[4], s[5], s[6],
+           s[7], s[8], s[9], m_check == 10 ? 'X' : m_check + '0');
     return 0;
   }
 
