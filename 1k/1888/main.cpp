@@ -16,6 +16,7 @@ int main() {
   scanf("%d%d%d", &a, &b, &c);
   ans_denominator = max(max(a, b), c);
   ans_numerator = min(min(a, b), c);
-  printf("%d/%d\n", ans_numerator, ans_denominator);
+  int gcd = getGCD(ans_numerator, ans_denominator);
+  printf("%d/%d\n", ans_numerator / gcd, ans_denominator / gcd);
   return 0;
 }
