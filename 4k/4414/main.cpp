@@ -2,10 +2,10 @@
 using namespace std;
 
 int main() {
-  // results
-  int a, b, c;
   // input array
   int arr[4];
+  // results
+  int ans[4];
   // order, s[0] is zero
   char order[4];
   scanf("%d%d%d", arr + 1, arr + 2, arr + 3);
@@ -14,16 +14,16 @@ int main() {
   for (int i = 1; i <= 3; i++) {
     switch (order[i]) {
       case 'A':
-        a = arr[i];
+        ans[i] = arr[1];
         break;
       case 'B':
-        b = arr[i];
+        ans[i] = arr[2];
         break;
       case 'C':
-        c = arr[i];
+        ans[i] = arr[3];
         break;
     }
   }
-  printf("%d %d %d\n", a, b, c);
+  printf("%d %d %d\n", ans[1], ans[2], ans[3]);
   return 0;
 }
