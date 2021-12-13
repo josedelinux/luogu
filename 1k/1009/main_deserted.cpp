@@ -16,6 +16,7 @@ int main() {
   for (int i = 2; i <= maxn; i++) {
     facArr[i] = i * facArr[i - 1];
   }
+
   printf("%d", sum);
 
   return 0;
