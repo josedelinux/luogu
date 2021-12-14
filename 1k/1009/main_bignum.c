@@ -1,4 +1,5 @@
 #include <stdio.h>
+// https://www.luogu.com.cn/blog/user42520/solution-p1009
 int main() {
   int i, A[1005] = {0}, B[1005] = {0}, n, j;
   scanf("%d", &n);
