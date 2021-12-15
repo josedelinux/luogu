@@ -16,15 +16,16 @@ int main() {
   int sum = 0;
   int k = 0;
   scanf("%d", &l);
+
   for (int i = 2;; i++) {
     if (is_prime(i)) {
-      printf("%d\n", i);
       sum = sum + i;
+      if (sum > l) {
+        printf("%d\n", k);
+        break;
+      }
+      printf("%d\n", i);
       k++;
-    }
-    if (sum > l) {
-      printf("%d\n", k);
-      break;
     }
   }
 
