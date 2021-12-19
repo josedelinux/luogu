@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define maxn 100000010
 
-// slow as fuck
+// simplest, slow as fuck
 int is_prime_deprecated(int n) {
   int i;
   for (i = 2; i < n; i++) {
