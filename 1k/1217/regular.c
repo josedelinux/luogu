@@ -1,7 +1,11 @@
+#include <math.h>
 #include <stdio.h>
+#include <string.h>
 #define maxn 100000010
 
-int ans[maxn];
+// instead of bool
+// we only need 0 or 1
+char ans[maxn];
 
 // simplest, slow as fuck
 int is_prime_deprecated(int n) {
@@ -36,27 +40,27 @@ void primeGen(int b) {
     if (ans[i]) {
       //质数的倍数绝对不是质数，把所有质数的倍数全部设为0
       for (int j = 2; j <= b / i; j++) {
-        ans[i * j] = 0;  // i*j<=b}
+        ans[i * j] = 0;  // i*j<=b
       }
     }
   }
+}
 
-  int main() {
-    int a, b;
-    primeGen();
-    scanf("%d%d", &a, &b);
+int main() {
+  int a, b;
+  scanf("%d%d", &a, &b);
 
-    // b<=10000000这个判断条件来自：除了11以外，一个数的位数是偶数的话，不可能为回文数素数。
-    // 如果一个回文素数的位数是偶数，则它的奇数位上的数字和与偶数位上的数字和必然相等；
-    // 根据数的整除性理论，容易判断这样的数肯定能被11整除，所以它就不可能是素数。
-    if (b >= 10000000) b = 9999999;
-    primeGen(b);
-    if (a > b) return -1;
-    for (int i = a; i <= b; i++) {
-      if (ans[i] && is_palindrome(i)) {
-        printf("%d", i);
-      }
+  // b<=10000000这个判断条件来自：除了11以外，一个数的位数是偶数的话，不可能为回文数素数。
+  // 如果一个回文素数的位数是偶数，则它的奇数位上的数字和与偶数位上的数字和必然相等；
+  // 根据数的整除性理论，容易判断这样的数肯定能被11整除，所以它就不可能是素数。
+  if (b >= 10000000) b = 9999999;
+  primeGen(b);
+  if (a > b) return -1;
+  for (int i = a; i <= b; i++) {
+    if (ans[i] && is_palindrome(i)) {
+      printf("%d\n", i);
     }
-
-    return 0;
   }
+
+  return 0;
+}
