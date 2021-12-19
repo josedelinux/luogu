@@ -27,20 +27,7 @@ int is_palindrome(int n) {
 int main() {
   int a, b;
 
-  //打表不是这样打的。。。。
-  // for (int i = 1; i < maxn; i++) {
-  //   if (is_palindrome(i) && is_prime(i)) {
-  //     ans[i] = 1;
-  //   }
-  // }
-
   scanf("%d%d", &a, &b);
-
-  // for (int i = a; i < b; i++) {
-  //   // if (is_palindrome(i)) printf("%d is palindrome\n", i);
-  //   // if (is_prime(i)) printf("%d is prime\n", i);
-  //   if (ans[i]) printf("%d\n", i);
-  // }
 
   for (int i = a; i < b; i++) {
     if (is_palindrome(i) && is_prime(i)) {
