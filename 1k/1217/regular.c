@@ -1,7 +1,8 @@
 #include <stdio.h>
 #define maxn 100000010
 
-int is_prime(int n) {
+// slow as fuck
+int is_prime_deprecated(int n) {
   int i;
   for (i = 2; i < n; i++) {
     if (n % i == 0) break;
@@ -11,6 +12,9 @@ int is_prime(int n) {
   else
     return 0;
 }
+
+// sieve of Eratosthenes
+int is_prime_deprecated(int n) {}
 
 int is_palindrome(int n) {
   int y = n, num = 0;
