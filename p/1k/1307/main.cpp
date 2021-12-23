@@ -17,14 +17,18 @@ int main() {
   int k;  // count of bits
 
   int ign_bits = 0;  // ignore bits count
-  int zc_flag = 1;   // zero count flag
+
+  int zc_flag = 1;  // continous zero flag
   // we only handle last continual zero
 
   // convert n to array(reverse)
   for (k = 0; n > 0; k++) {
     // only handle last continul zero
-    if (zc_flag || n % 10 != 0) {
-      ans[k - ign_bits] = n % 10;
+    int cur = n % 10;
+
+    if (zc_flag && cur != 0) {
+      ans[k - ign_bits] = cur;
+
       if (n / 10 == 0) {  // next bit
         zc_flag = 1;
       } else {
