@@ -25,14 +25,14 @@ int main() {
   for (k = 0; n > 0; k++) {
     // only handle last continul zero
     int cur = n % 10;
-
+    int next = n % 100 / 10;
     if (zc_flag && cur != 0) {
       ans[k - ign_bits] = cur;
 
-      if (n / 10 == 0) {  // next bit
-        zc_flag = 1;
-      } else {
+      if (next == 0) {  // next bit
         zc_flag = 0;
+      } else {
+        zc_flag = 1;
       }
     } else {
       // ignore current bits
