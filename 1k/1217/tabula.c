@@ -1,7 +1,7 @@
 #include <stdio.h>
-#define maxn 100000010
+#define maxn 1000010
 
-int ans[maxn] = {};
+int ans[maxn] = {0};
 int main() {
   int a, b;
 
