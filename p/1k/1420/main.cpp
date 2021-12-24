@@ -16,8 +16,12 @@ int main()
 
 	int tmp=0;
 	for (int i = 0; i < n; i++) {
-
-		if (arr[i + 1] - arr[i] == 1) {
+		int offset =1;
+		//adjust offset to skip same value
+		if(arr[i + offset] == arr[i] ) {
+			offset++;
+		}
+		if (arr[i + offset] - arr[i] == 1) {
 			tmp++;
 			ans=max(ans,tmp+1);
 		} else {
