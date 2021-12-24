@@ -19,13 +19,13 @@ int main()
 
 		if (arr[i + 1] - arr[i] == 1) {
 			tmp++;
-			if (tmp > ans) ans = tmp;
+			ans=max(ans,tmp+1);
 		} else {
 			tmp=0;
 		}
 	}
 
 
-	printf("%d\n", ans+1);
+	printf("%d\n", ans);
 	return 0;
 }
