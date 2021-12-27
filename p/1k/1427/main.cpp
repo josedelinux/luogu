@@ -7,12 +7,12 @@ int main() {
   int k = 0;
   do {
     scanf("%d", &a[k]);
-    if (a[k] == '0') break;
+    if (a[k] == '0' || a[k] == '\0') break;
     k++;
   } while (1);
 
-  for (int i = k; i > 0; i--) {
-    printf("%d ", n);
+  for (int i = k - 1; i >= 0; i--) {
+    printf("%d ", a[i]);
   }
   putchar('\n');
   return 0;
