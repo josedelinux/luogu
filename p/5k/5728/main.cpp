@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define maxn 1005
-#define DEBUG
+
 
 struct Stu {
 	int cn;
