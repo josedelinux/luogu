@@ -9,6 +9,9 @@ struct Stu {
 	inline int getSum(void) {
 		return cn+ma+en;
 	}
+	inline void dump() {
+		printf("%d %d %d\n",cn,ma,en);
+	}
 } stu[maxn];
 
 int is_even(struct Stu s1,struct Stu s2)
@@ -25,13 +28,15 @@ int main()
 	int T=0;
 	int ans=0;
 	scanf("%d",&T);
-	while(T--) {
+	for(int i=0; i<T; i++) {
 		scanf("%d %d %d",&stu[T].cn,&stu[T].ma,&stu[T].en);
 	}
-	printf("%d\n", is_even(stu[1],stu[2]));
+	for(int i=0; i<T; i++)
+		for(int j=i; j<T; j++)
+			printf("cmp:%d %d\n",i,j);
+	//ans= ans+is_even(stu[i],stu[j]);
 
 	printf("%d\n", ans);
-
 	return 0;
 }
 
