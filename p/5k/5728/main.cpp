@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define maxn 1005
+#define DEBUG
 
 struct Stu {
 	int cn;
@@ -32,9 +33,12 @@ int main()
 		scanf("%d %d %d",&stu[T].cn,&stu[T].ma,&stu[T].en);
 	}
 	for(int i=0; i<T; i++)
-		for(int j=i; j<T; j++)
+		for(int j=i+1; j<T; j++) {
+#ifdef DEBUG
 			printf("cmp:%d %d\n",i,j);
-	//ans= ans+is_even(stu[i],stu[j]);
+#endif
+			ans= ans+is_even(stu[i],stu[j]);
+		}
 
 	printf("%d\n", ans);
 	return 0;
