@@ -17,8 +17,8 @@ struct Stu {
 
 int is_even(struct Stu s1,struct Stu s2)
 {
-	if((s1.cn-s2.cn)*(s1.cn-s2.cn)<=25&&(s1.ma-s2.ma)*(s1.ma-s2.ma)<=25&&(s1.en-s2.en)*(s1.en-s2.en)<=25) {
-		if((s1.getSum()-s2.getSum())*(s1.getSum()-s2.getSum())<=25)
+	if(abs(s1.cn-s2.cn)<=5&&abs(s1.ma-s2.ma)<=5&&abs(s1.en-s2.en)<=5) {
+		if(abs(s1.getSum()-s2.getSum())<=10)
 			return 1;
 	}
 	return 0;
