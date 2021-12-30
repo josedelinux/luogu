@@ -17,11 +17,10 @@ struct Stu {
 
 int is_even(struct Stu s1,struct Stu s2)
 {
-	if(abs(s1.cn-s2.cn)<=5&&abs(s1.ma-s2.ma)<=5&&abs(s1.en-s2.en)<=5) {
-		if(abs(s1.getSum()-s2.getSum())<=10)
-			return 1;
-	}
-	return 0;
+	if(abs(s1.cn-s2.cn)<=5&&abs(s1.ma-s2.ma)<=5&&abs(s1.en-s2.en)<=5&&abs(s1.getSum()-s2.getSum())<=10)
+		return 1;
+	else
+		return 0;
 }
 
 int main()
@@ -30,7 +29,7 @@ int main()
 	int ans=0;
 	scanf("%d",&T);
 	for(int i=0; i<T; i++) {
-		scanf("%d %d %d",&stu[T].cn,&stu[T].ma,&stu[T].en);
+		scanf("%d %d %d",&stu[i].cn,&stu[i].ma,&stu[i].en);
 	}
 	for(int i=0; i<T; i++)
 		for(int j=i+1; j<T; j++) {
