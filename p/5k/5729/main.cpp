@@ -22,7 +22,9 @@ int main() {
       for (int j = min(y1, y2); j <= max(y1, y2); j++) {
         for (int k = min(z1, z2); k <= max(z1, z2); k++) {
           cub[i][j][k] = 1;
+#ifdef DEBUG
           printf("Marked: [%d][%d][%d]\n", i, j, k);
+#endif
         }
       }
     }
