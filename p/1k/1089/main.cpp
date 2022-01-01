@@ -23,20 +23,27 @@ int main() {
   for (int i = 0; i < 12; i++) {
     int got = left + 300;
     int amt = (got - n[i]) / 100;
-#ifdef DEBUG
-    printf("got:%d\n", got);
-    printf("deposit:%d\n", amt * 100);
-#endif
 
     bank += amt * 100;
     left = got - 100 * amt;
+    left = left - n[i];
+    if (left < 0) {
+      printf("-%d", i + 1);
+      return 0;
+    }
 
 #ifdef DEBUG
+    printf("----- Month %d -----\n", i + 1);
+    printf("cost this month:%d\n", n[i]);
     printf("left:%d\n", left);
+    printf("got:%d\n", got);
+    printf("deposit:%d\n", amt * 100);
     printf("bank:%d\n", bank);
+    printf("----------\n");
 #endif
   }
 
+  ans = bank + left;
   printf("%d\n", ans);
 
   return 0;
