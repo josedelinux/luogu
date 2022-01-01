@@ -8,7 +8,7 @@ left = bank - amt * 100
 
 #include <bits/stdc++.h>
 using namespace std;
-#define DEBUG
+//#define DEBUG
 
 int main() {
   int n[13];  // cost
@@ -43,7 +43,7 @@ int main() {
 #endif
   }
 
-  ans = bank + left;
+  ans = bank * 1.2 + left;
   printf("%d\n", ans);
 
   return 0;
