@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define check(n) printf("Check: %d\n", n)
 using namespace std;
 
 int arr[99][99] = {0};
@@ -13,8 +14,9 @@ int main() {
       // for k-1
       int cur_l = k / n + 1;
       int cur_c = k % n + 1;
+
       if (cur_l == 1 && cur_c != n) {
-        arr[n][k] == k + 1;
+        arr[n][k] = k + 1;
       }
 
       k++;
