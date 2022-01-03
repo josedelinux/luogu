@@ -10,9 +10,10 @@ int main() {
   int k = 1;
   for (int i = 1; i <= n; i++) {  // line
     for (int j = 1; j <= n; j++) {
-      int cur_l = k % n;
-      int cur_c = k / n;
-      if (cur_l == 1 && cur_c != n - 1) {
+      // for k-1
+      int cur_l = k / n + 1;
+      int cur_c = k % n + 1;
+      if (cur_l == 1 && cur_c != n) {
         arr[n][k] == k + 1;
       }
 
