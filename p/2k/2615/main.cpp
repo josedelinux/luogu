@@ -1,5 +1,8 @@
 /*
 so nasty
+ref:
+https://loicz.blog.luogu.org/p2615-ti-xie
+
 1.若 (K-1)(K−1) 在第一行但不在最后一列，则将 KK 填在最后一行， (K-1)(K−1)
 所在列的右一列；
 2. 若 (K-1)(K−1) 在最后一列但不在第一行，则将 KK 填在第一列，
@@ -21,27 +24,37 @@ int main() {
   scanf("%d", &n);
   if (n % 2 == 0) return -1;
 
-  int k = 1;
+  int k = 2;
+
+  int x = 1;
+  int y = n / 2 + 1;
   //首先将 1 写在第一行的中间。
-  arr[1][n / 2 + 1] = 1;
-  for (int i = 1; i <= n; i++) {  // line
-    for (int j = 1; j <= n; j++) {
-      // for k-1
-      int cur_l = k / n + 1;
-      int cur_c = k % n + 1;
+  arr[x][y] = 1;
 
-      if (cur_l == 1 && cur_c != n) {
-        //若 (K-1)(K−1) 在第一行但不在最后一列，则将 KK 填在最后一行，
-        //(K−1) 所在列的右一列；
-        arr[n][k + 1 + 1] = k + 1;
-      } else if (cur_l == n && cur_c != 1) {
-        //若 (K-1)(K−1) 在最后一列但不在第一行，则将 KK 填在第一列， (K-1)
-        //所在行的上一行；
-        arr[1][k + 1 - 1] = k + 1;
+  int end = n * n;
+  for (int i = 2; i <= end; i++) {
+    if (x == 1 && y != n) {
+      arr[n][y + 1] = k;
+      x = n;
+      y = y + 1;
+    } else if (y == n && x != 1) {
+      arr[x - 1][1] = k;
+      x = x - 1;
+      y = 1;
+    } else if (x == 1 && y == n) {
+      arr[x + 1][y] = k;
+      x = x + 1;
+
+    } else if (x != 1 && y != n) {
+      if (arr[x - 1][y + 1] == 0) {
+        arr[x - 1][y + 1] = k;
+        x = x + 1;
+      } else {
+        arr[x + 1][y] = k;
+        x = x + 1;
       }
-
-      k++;
     }
+    k++;
   }
 
   for (int i = 1; i <= n; i++) {
