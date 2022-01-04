@@ -190,15 +190,17 @@ int main() {
   int arr[105];
   int n;
   scanf("%d", &n);
-  getchar();  // newline
   for (int i = 0; i < n; i++) {
-    arr[i] = getchar();
+    int ch;
+    scanf(" %c", &ch);
+    arr[i] = ch - '0';
   }
 
   for (int i = 0; i < 5; i++) {      //枚举每一行
     for (int j = 0; j < n; j++) {    //枚举每一个数字
       for (int k = 0; k < 3; k++) {  //枚举每个数字的列
-        printf("%c", Rune[arr[j] - '0'][i][k]);
+        printf("%c", Rune[arr[j]][i][k]);
+        // putchar(Rune[arr[j]][i][k]);same effect
       }
       if (j != n - 1) printf(".");
     }
