@@ -191,20 +191,19 @@ int main() {
   int n;
   scanf("%d", &n);
   for (int i = 0; i < n; i++) {
-    char ch;
-    scanf(" %c", &ch);  // a space to skip \r\n stuff
-    arr[i] = ch - '0';
+    cin >> arr[i];  // cin 大法好
   }
 
   for (int i = 0; i < 5; i++) {      //枚举每一行
     for (int j = 0; j < n; j++) {    //枚举每一个数字
       for (int k = 0; k < 3; k++) {  //枚举每个数字的列
-        printf("%c", Rune[arr[j]][i][k]);
+        cout << Rune[arr[j]][i][k];
+        // printf("%c", Rune[arr[j]][i][k]);
         // putchar(Rune[arr[j]][i][k]);same effect
       }
-      if (j != n - 1) printf(".");
+      if (j != n - 1) cout << '.';
     }
-    putchar('\n');
+    cout << endl;
   }
   return 0;
 }
