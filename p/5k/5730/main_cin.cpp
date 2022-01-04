@@ -191,7 +191,7 @@ int main() {
   int n;
   cin >> n;
   for (int i = 0; i < n; i++) {
-    cin >> arr[i];  // cin 大法好 nb arr[i] 是char
+    cin >> arr[i];  // cin 大法好 n.b. arr[i] 是char
   }
 
   for (int i = 0; i < 5; i++) {      //枚举每一行
