@@ -19,8 +19,11 @@ int arr[99][99] = {0};
 int main() {
   int n;
   scanf("%d", &n);
+  if (n % 2 == 0) return -1;
 
   int k = 1;
+  //首先将 1 写在第一行的中间。
+  arr[1][n / 2 + 1] = 1;
   for (int i = 1; i <= n; i++) {  // line
     for (int j = 1; j <= n; j++) {
       // for k-1
