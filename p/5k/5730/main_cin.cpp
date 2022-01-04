@@ -191,15 +191,15 @@ int main() {
   int n;
   cin >> n;
   for (int i = 0; i < n; i++) {
-    cin >> arr[i];  // cin 大法好
+    cin >> arr[i];  // cin 大法好 nb arr[i] 是char
   }
 
   for (int i = 0; i < 5; i++) {      //枚举每一行
     for (int j = 0; j < n; j++) {    //枚举每一个数字
       for (int k = 0; k < 3; k++) {  //枚举每个数字的列
-        cout << Rune[arr[j]][i][k];
-        // printf("%c", Rune[arr[j]][i][k]);
-        // putchar(Rune[arr[j]][i][k]);same effect
+        cout << Rune[arr[j] - '0'][i][k];
+        // printf("%c", Rune[arr[j]-'0'][i][k]);
+        // putchar(Rune[arr[j]-'0'][i][k]);same effect
       }
       if (j != n - 1) cout << '.';
     }
