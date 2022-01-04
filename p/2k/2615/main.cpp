@@ -46,9 +46,10 @@ int main() {
       x = x + 1;
 
     } else if (x != 1 && y != n) {
-      if (arr[x - 1][y + 1] == 0) {
+      if (arr[x - 1][y + 1] == 0) {  //如果k-1右上方还未填数
         arr[x - 1][y + 1] = k;
-        x = x + 1;
+        x = x - 1;
+        y = y + 1;
       } else {
         arr[x + 1][y] = k;
         x = x + 1;
