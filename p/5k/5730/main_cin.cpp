@@ -187,11 +187,12 @@ char Rune[10][5][3] = {{
                        }};
 
 int main() {
-  int arr[105];
+  char arr[105];
   int n;
   cin >> n;
   for (int i = 0; i < n; i++) {
-    cin >> arr[i];  // cin 大法好 n.b. arr[i] 是char
+    cin >> arr[i];  // cin 大法好
+                    // n.b. arr[i] 是char(要声明arr为char才可以！！！)
   }
 
   for (int i = 0; i < 5; i++) {      //枚举每一行
