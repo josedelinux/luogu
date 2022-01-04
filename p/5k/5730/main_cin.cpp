@@ -189,7 +189,7 @@ char Rune[10][5][3] = {{
 int main() {
   int arr[105];
   int n;
-  scanf("%d", &n);
+  cin >> n;
   for (int i = 0; i < n; i++) {
     cin >> arr[i];  // cin 大法好
   }
