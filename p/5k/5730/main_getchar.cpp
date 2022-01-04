@@ -189,6 +189,9 @@ int main() {
   int n;
   scanf("%d", &n);
   getchar();  // newline for windows
+#ifdef __unix__
+  getchar();  // \r\n for linux
+#endif
   for (int i = 0; i < n; i++) {
     arr[i] = getchar();
   }
