@@ -8,10 +8,10 @@ int main() {
   scanf("%d%d", &m, &n);
 
   for (; m <= n; m++) {
-    int l = m;
-    while (m >= 0) {
-      k[m % 10]++;
-      m = m / 10;
+    int t = m;
+    while (t > 0) {
+      k[t % 10]++;
+      t = t / 10;
     }
   }
 
