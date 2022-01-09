@@ -12,7 +12,7 @@ int main() {
   for (int i = 0; i < n; i++) {
     scanf("%d", &arr[i]);
   }
-  for (int i = 0; i < n - m; i++) {
+  for (int i = 0; i <= n - m; i++) {
     int sum = 0;
     for (int j = 0; j < m; j++) sum += arr[i + j];
     if (sum < min) min = sum;
