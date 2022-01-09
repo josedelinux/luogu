@@ -12,8 +12,9 @@ int main() {
   for (int i = 0; i < n; i++) {
     scanf("%d", &arr[i]);
   }
-  for (int i = 1; i < n; i++) {
-    int sum = arr[i - 1] + arr[i] + arr[i + 1];
+  for (int i = 0; i < n; i++) {
+    int sum = 0;
+    for (int j = 0; j < m; j++) sum += arr[i + j];
     if (sum < min) min = sum;
   }
   printf("%d\n", min);
