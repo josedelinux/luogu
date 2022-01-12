@@ -21,7 +21,7 @@ int main() {
     arr[x][y] = cnt;
     int tx = x + pos[dir][0];
     int ty = y + pos[dir][1];
-    if (tx < 0 || tx > n || ty < 0 || ty > n || arr[tx][ty]) {
+    if (tx < 0 || tx >= n || ty < 0 || ty >= n || arr[tx][ty]) {
       // if we go beyond the border
       dir = (dir + 1) % 4;  // change direction
     }
