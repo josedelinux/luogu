@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define DEBUG
+#define DEBUGNO
 #define maxn 5005
 
 bool light[2000000] = {false};
