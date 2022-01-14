@@ -24,13 +24,6 @@ int tl[5][5] = {{0, 0, 1, 0, 0},
                 {0, 1, 1, 1, 0},
                 {0, 0, 1, 0, 0}};
 
-// glow stone light
-int gl[5][5] = {{1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1},
-                {1, 1, 1, 1, 1}};
-
 void prtmap() {
   puts("------------");
   for (int cx = mapstart; cx <= mapend && cx < n + mapstart; cx++) {
@@ -100,7 +93,7 @@ int main() {
     // fill them
     for (int dx = -2; dx <= 2; dx++) {
       for (int dy = -2; dy <= 2; dy++) {
-        mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
+        mapa[nx + dx][ny + dy] |= 1;
       }
     }
   }
