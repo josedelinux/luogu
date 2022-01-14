@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define maxn 104
+#define mapstart 2
+#define mapend 101
+#define DEBUG
 /*
-row 0~1 and col 0~1 are outside of the map
-map range from 2 ~ 102
+row and col 0,1  102,103 are outside of the map
+map range from 2(included) to 101(included)
 */
 
 int mapa[maxn][maxn];
@@ -26,7 +29,21 @@ int gl[5][5] = {{1, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1}};
 
+void prtmap() {
+  for (int cx = mapstart; cx <= mapend; cx++) {
+    for (int cy = mapstart; cy <= mapend; cy++) {
+      printf("%d", mapa[cx][cy]);
+    }
+    putchar('\n');
+  }
+  puts("----");
+}
+
 main() {
+#ifdef DEBUG
+  freopen("debug.txt", "w", stdout);
+#endif
+
   int n, m, k;
   /* input */
   scanf("%d %d %d", &n, &m, &k);
@@ -48,10 +65,13 @@ main() {
   //   }
   // }
 
-  for (int cx = 2; cx <= 102; cx++) {
-    for (int cy = 2; cy <= 102; cy++) {
-      // we bitwise or them
-
+  for (int cx = mapstart; cx <= mapend; cx++) {
+    for (int cy = mapstart; cy <= mapend; cy++) {
+      // we 'bitwise or' them
+#ifdef DEBUG
+      puts("init");
+      prtmap();
+#endif
       // torch
       while (m > 0) {
         for (int dx = -2; dx <= 2; dx++) {
@@ -63,6 +83,10 @@ main() {
         }
         m--;
       }
+#ifdef DEBUG
+      puts("after filling torch");
+      prtmap();
+#endif
       // glow stone
       while (k > 0) {
         for (int dx = -2; dx <= 2; dx++) {
@@ -74,12 +98,16 @@ main() {
         }
         k--;
       }
+#ifdef DEBUG
+      puts("after filling glowstone");
+      prtmap();
+#endif
     }
   }
   // count ans;
   int ans = 0;
-  for (int cx = 2; cx <= 102; cx++) {
-    for (int cy = 2; cy <= 102; cy++) {
+  for (int cx = mapstart; cx <= mapend; cx++) {
+    for (int cy = mapstart; cy <= mapend; cy++) {
       if (mapa[cx][cy] == 0) ans++;
     }
   }
