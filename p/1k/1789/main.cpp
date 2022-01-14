@@ -31,8 +31,8 @@ int gl[5][5] = {{1, 1, 1, 1, 1},
 
 void prtmap() {
   puts("------------");
-  for (int cx = mapstart; cx <= mapend && cx < 10; cx++) {
-    for (int cy = mapstart; cy <= mapend && cy < 10; cy++) {
+  for (int cx = mapstart; cx <= mapend && cx < 10 + 2; cx++) {
+    for (int cy = mapstart; cy <= mapend && cy < 10 + 2; cy++) {
       printf("%d", mapa[cx][cy]);
     }
     putchar('\n');
@@ -77,9 +77,12 @@ main() {
       for (int i = 0; i < m; i++) {
         for (int dx = -2; dx <= 2; dx++) {
           for (int dy = -2; dy <= 2; dy++) {
-            int nx = t[i].first + dx;
-            int ny = t[i].second + dy;
-            mapa[cx][cy] = mapa[cx][cy] | tl[nx][ny];
+            // cordinate shift
+            int nx = t[i].first + cx;
+            int ny = t[i].second + cy;
+            nx += dx;
+            ny += dy;
+            mapa[nx][ny] = mapa[nx][ny] | tl[dx + 2][dy + 2];
           }
         }
       }
