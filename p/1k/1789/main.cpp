@@ -3,7 +3,7 @@ using namespace std;
 #define maxn 104
 #define mapstart 2
 #define mapend 101
-#define DEBUG
+#define DEBUGn
 
 /*
 row and col 0,1  102,103 are outside of the map
@@ -86,8 +86,8 @@ int main() {
     g[i].second--;
 
     // cordinate shift
-    int nx = t[i].first + mapstart;
-    int ny = t[i].second + mapstart;
+    int nx = g[i].first + mapstart;
+    int ny = g[i].second + mapstart;
     //(nx,ny): torch point
 
     // fill them
