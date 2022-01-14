@@ -2,10 +2,24 @@
 using namespace std;
 #define maxn 105
 
-bool map[maxn][maxn];
+int map[maxn][maxn];
 
 pair<int, int> t[];  // torch
 pair<int, int> g[];  // glow stone
+
+// torch light
+int tl[5][5] = {{0, 0, 1, 0, 0},
+                {0, 1, 1, 1, 0},
+                {1, 1, 1, 1, 1},
+                {0, 1, 1, 1, 0},
+                {0, 0, 1, 0, 0}};
+
+// glow stone light
+int gl[5][5] = {{1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1}};
 
 main() {
   int n, m, k;
@@ -19,5 +33,15 @@ main() {
       scanf("%d %d", g->first, g->second);
     }
   }
+
+  // handle torch light
+  // for (int dx = -2; dx <= 2; dx++) {
+  //   for (int dy = -2; dy <= 2; dy++) {
+  //     if (0 <= dy && dy < n && 0 <= dx && dx < n && 1) {
+
+  //     }
+  //   }
+  // }
+
   return 0;
 }
