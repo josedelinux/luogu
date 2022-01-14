@@ -65,8 +65,8 @@ main() {
   //   }
   // }
 
-  for (int cx = mapstart; cx <= mapend; cx++) {
-    for (int cy = mapstart; cy <= mapend; cy++) {
+  for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
+    for (int cy = mapstart; cy <= mapend && cx < n; cy++) {
       // we 'bitwise or' them
 #ifdef DEBUG
       puts("init");
@@ -106,8 +106,8 @@ main() {
   }
   // count ans;
   int ans = 0;
-  for (int cx = mapstart; cx <= mapend; cx++) {
-    for (int cy = mapstart; cy <= mapend; cy++) {
+  for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
+    for (int cy = mapstart; cy <= mapend && cx < n; cy++) {
       if (mapa[cx][cy] == 0) ans++;
     }
   }
