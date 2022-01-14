@@ -82,8 +82,8 @@ int main() {
 
   // glow stone
   for (int i = 0; i < k; i++) {
-    t[i].first--;
-    t[i].second--;
+    g[i].first--;
+    g[i].second--;
 
     // cordinate shift
     int nx = t[i].first + mapstart;
