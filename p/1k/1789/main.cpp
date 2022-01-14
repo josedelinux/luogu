@@ -42,7 +42,7 @@ void prtmap() {
 
 main() {
 #ifdef DEBUG
-  freopen("debug.txt", "w", stdout);
+  // freopen("debug.txt", "w", stdout);
 #endif
 
   int n, m, k;
