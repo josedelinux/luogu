@@ -48,8 +48,8 @@ main() {
   //   }
   // }
 
-  for (int cx = 2; cx < 102; cx++) {
-    for (int cy = 2; cy < 102; cy++) {
+  for (int cx = 2; cx <= 102; cx++) {
+    for (int cy = 2; cy <= 102; cy++) {
       // we bitwise or them
 
       // torch
@@ -78,8 +78,8 @@ main() {
   }
   // count ans;
   int ans = 0;
-  for (int cx = 2; cx < 102; cx++) {
-    for (int cy = 2; cy < 102; cy++) {
+  for (int cx = 2; cx <= 102; cx++) {
+    for (int cy = 2; cy <= 102; cy++) {
       if (mapa[cx][cy] == 0) ans++;
     }
   }
