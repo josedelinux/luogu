@@ -30,13 +30,14 @@ int gl[5][5] = {{1, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1}};
 
 void prtmap() {
-  for (int cx = mapstart; cx <= mapend; cx++) {
-    for (int cy = mapstart; cy <= mapend; cy++) {
+  puts("------------");
+  for (int cx = mapstart; cx <= mapend && cx < 10; cx++) {
+    for (int cy = mapstart; cy <= mapend && cy < 10; cy++) {
       printf("%d", mapa[cx][cy]);
     }
     putchar('\n');
   }
-  puts("----");
+  puts("------------");
 }
 
 main() {
@@ -66,37 +67,35 @@ main() {
   // }
 
   for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
-    for (int cy = mapstart; cy <= mapend && cx < n; cy++) {
+    for (int cy = mapstart; cy <= mapend && cy < n; cy++) {
       // we 'bitwise or' them
 #ifdef DEBUG
       puts("init");
       prtmap();
 #endif
       // torch
-      while (m > 0) {
+      for (int i = 0; i < m; i++) {
         for (int dx = -2; dx <= 2; dx++) {
           for (int dy = -2; dy <= 2; dy++) {
-            int nx = t[m].first + dx;
-            int ny = t[m].second + dy;
+            int nx = t[i].first + dx;
+            int ny = t[i].second + dy;
             mapa[cx][cy] = mapa[cx][cy] | tl[nx][ny];
           }
         }
-        m--;
       }
 #ifdef DEBUG
       puts("after filling torch");
       prtmap();
 #endif
       // glow stone
-      while (k > 0) {
+      for (int i = 0; i < k; i++) {
         for (int dx = -2; dx <= 2; dx++) {
           for (int dy = -2; dy <= 2; dy++) {
-            int nx = t[k].first + dx;
-            int ny = t[k].second + dy;
+            int nx = t[i].first + dx;
+            int ny = t[i].second + dy;
             mapa[cx][cy] = mapa[cx][cy] | gl[nx][ny];
           }
         }
-        k--;
       }
 #ifdef DEBUG
       puts("after filling glowstone");
@@ -107,7 +106,7 @@ main() {
   // count ans;
   int ans = 0;
   for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
-    for (int cy = mapstart; cy <= mapend && cx < n; cy++) {
+    for (int cy = mapstart; cy <= mapend && cy < n; cy++) {
       if (mapa[cx][cy] == 0) ans++;
     }
   }
