@@ -9,7 +9,7 @@ row and col 0,1  102,103 are outside of the map
 map range from 2(included) to 101(included)
 */
 
-int mapa[maxn][maxn];
+int mapa[maxn][maxn] = {-1};
 
 // x,y
 pair<int, int> t[maxn];  // torch
@@ -57,15 +57,6 @@ main() {
     }
   }
 
-  // handle torch light
-  // for (int dx = -2; dx <= 2; dx++) {
-  //   for (int dy = -2; dy <= 2; dy++) {
-  //     if (0 <= dy && dy < n && 0 <= dx && dx < n && 1) {
-
-  //     }
-  //   }
-  // }
-
   for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
     for (int cy = mapstart; cy <= mapend && cy < n; cy++) {
       // we 'bitwise or' them
@@ -75,11 +66,16 @@ main() {
 #endif
       // torch
       for (int i = 0; i < m; i++) {
+        t[i].first--;
+        t[i].second--;
+
+        // cordinate shift
+        int nx = t[i].first + cx;
+        int ny = t[i].second + cy;
+        //(nx,ny): torch point
+
         for (int dx = -2; dx <= 2; dx++) {
           for (int dy = -2; dy <= 2; dy++) {
-            // cordinate shift
-            int nx = t[i].first + cx;
-            int ny = t[i].second + cy;
             nx += dx;
             ny += dy;
             mapa[nx][ny] = mapa[nx][ny] | tl[dx + 2][dy + 2];
