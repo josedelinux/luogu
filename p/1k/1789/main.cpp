@@ -33,8 +33,8 @@ int gl[5][5] = {{1, 1, 1, 1, 1},
 
 void prtmap() {
   puts("------------");
-  for (int cx = mapstart; cx <= mapend && cx < 10 + 2; cx++) {
-    for (int cy = mapstart; cy <= mapend && cy < 10 + 2; cy++) {
+  for (int cx = mapstart; cx <= mapend && cx < n + 2; cx++) {
+    for (int cy = mapstart; cy <= mapend && cy < n + 2; cy++) {
       printf("%d", mapa[cx][cy]);
     }
     putchar('\n');
