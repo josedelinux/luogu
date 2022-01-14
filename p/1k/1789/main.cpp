@@ -4,11 +4,13 @@ using namespace std;
 #define mapstart 2
 #define mapend 101
 #define DEBUG
+
 /*
 row and col 0,1  102,103 are outside of the map
 map range from 2(included) to 101(included)
 */
 
+int n, m, k;
 int mapa[maxn][maxn];
 
 // x,y
@@ -45,7 +47,6 @@ main() {
   // freopen("debug.txt", "w", stdout);
 #endif
 
-  int n, m, k;
   /* input */
   scanf("%d %d %d", &n, &m, &k);
   for (int i = 0; i < m; i++) {
