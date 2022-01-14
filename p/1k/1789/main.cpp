@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define maxn 100
+#define maxn 105
 
-int map[100][100];
+bool map[maxn][maxn];
 
 pair<int, int> t[];  // torch
 pair<int, int> g[];  // glow stone
