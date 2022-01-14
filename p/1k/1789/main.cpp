@@ -86,6 +86,7 @@ int main() {
   puts("after filling torch");
   prtmap();
 #endif
+
   // glow stone
   for (int i = 0; i < k; i++) {
     t[i].first--;
@@ -101,13 +102,14 @@ int main() {
       for (int dy = -2; dy <= 2; dy++) {
         mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
       }
-
-#ifdef DEBUG
-      puts("after filling glowstone");
-      prtmap();
-#endif
     }
   }
+
+#ifdef DEBUG
+  puts("after filling glowstone");
+  prtmap();
+#endif
+
   // count ans;
   int ans = 0;
   for (int cx = mapstart; cx <= mapend && cx < n + 2; cx++) {
