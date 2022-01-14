@@ -31,11 +31,11 @@ main() {
   /* input */
   scanf("%d %d %d", &n, &m, &k);
   for (int i = 0; i < m; i++) {
-    scanf("%d %d", t[i].first, t[i].second);
+    scanf("%d %d", &t[i].first, &t[i].second);
   }
   if (k) {
     for (int i = 0; i < k; i++) {
-      scanf("%d %d", g[i].first, g[i].second);
+      scanf("%d %d", &g[i].first, &g[i].second);
     }
   }
 
