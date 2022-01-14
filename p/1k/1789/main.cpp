@@ -42,7 +42,7 @@ void prtmap() {
   puts("------------");
 }
 
-main() {
+int main() {
 #ifdef DEBUG
   // freopen("debug.txt", "w", stdout);
 #endif
