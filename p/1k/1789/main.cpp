@@ -1,11 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define maxn 105
+#define maxn 104
+/*
+row 0~1 and col 0~1 are outside of the map
+map range from 2 ~ 102
+*/
 
-int map[maxn][maxn];
+int mapa[maxn][maxn];
 
-pair<int, int> t[];  // torch
-pair<int, int> g[];  // glow stone
+// x,y
+pair<int, int> t[maxn];  // torch
+pair<int, int> g[maxn];  // glow stone
 
 // torch light
 int tl[5][5] = {{0, 0, 1, 0, 0},
@@ -43,5 +48,41 @@ main() {
   //   }
   // }
 
+  for (int cx = 2; cx < 102; cx++) {
+    for (int cy = 2; cy < 102; cy++) {
+      // we bitwise or them
+
+      // torch
+      while (m > 0) {
+        for (int dx = -2; dx <= 2; dx++) {
+          for (int dy = -2; dy <= 2; dy++) {
+            int nx = t[m].first + dx;
+            int ny = t[m].second + dy;
+            mapa[cx][cy] = mapa[cx][cy] | tl[nx][ny];
+          }
+        }
+        m--;
+      }
+      // glow stone
+      while (k > 0) {
+        for (int dx = -2; dx <= 2; dx++) {
+          for (int dy = -2; dy <= 2; dy++) {
+            int nx = t[k].first + dx;
+            int ny = t[k].second + dy;
+            mapa[cx][cy] = mapa[cx][cy] | gl[nx][ny];
+          }
+        }
+        k--;
+      }
+    }
+  }
+  // count ans;
+  int ans = 0;
+  for (int cx = 2; cx < 102; cx++) {
+    for (int cy = 2; cy < 102; cy++) {
+      if (mapa[cx][cy] == 0) ans++;
+    }
+  }
+  printf("%d\n", ans);
   return 0;
 }
