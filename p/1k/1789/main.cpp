@@ -105,8 +105,8 @@ main() {
   }
   // count ans;
   int ans = 0;
-  for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
-    for (int cy = mapstart; cy <= mapend && cy < n; cy++) {
+  for (int cx = mapstart; cx <= mapend && cx < n + 2; cx++) {
+    for (int cy = mapstart; cy <= mapend && cy < n + 2; cy++) {
       if (mapa[cx][cy] == 0) ans++;
     }
   }
