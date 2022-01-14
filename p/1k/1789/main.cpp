@@ -57,52 +57,50 @@ main() {
     }
   }
 
-  for (int cx = mapstart; cx <= mapend && cx < n; cx++) {
-    for (int cy = mapstart; cy <= mapend && cy < n; cy++) {
-      // we 'bitwise or' them
 #ifdef DEBUG
-      puts("init");
-      prtmap();
+  puts("init");
+  prtmap();
 #endif
-      // torch
-      for (int i = 0; i < m; i++) {
-        t[i].first--;
-        t[i].second--;
 
-        // cordinate shift
-        int nx = t[i].first + cx;
-        int ny = t[i].second + cy;
-        //(nx,ny): torch point
+  // we 'bitwise or' them
+  // torch
+  for (int i = 0; i < m; i++) {
+    t[i].first--;
+    t[i].second--;
 
-        // fill them
-        for (int dx = -2; dx <= 2; dx++) {
-          for (int dy = -2; dy <= 2; dy++) {
-            mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
-          }
-        }
+    // cordinate shift
+    int nx = t[i].first + mapstart;
+    int ny = t[i].second + mapstart;
+    //(nx,ny): torch point
+
+    // fill them
+    for (int dx = -2; dx <= 2; dx++) {
+      for (int dy = -2; dy <= 2; dy++) {
+        mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
+      }
+    }
+  }
+
+#ifdef DEBUG
+  puts("after filling torch");
+  prtmap();
+#endif
+  // glow stone
+  for (int i = 0; i < k; i++) {
+    t[i].first--;
+    t[i].second--;
+
+    // cordinate shift
+    int nx = t[i].first + mapstart;
+    int ny = t[i].second + mapstart;
+    //(nx,ny): torch point
+
+    // fill them
+    for (int dx = -2; dx <= 2; dx++) {
+      for (int dy = -2; dy <= 2; dy++) {
+        mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
       }
 
-#ifdef DEBUG
-      puts("after filling torch");
-      prtmap();
-#endif
-      // glow stone
-      for (int i = 0; i < k; i++) {
-        t[i].first--;
-        t[i].second--;
-
-        // cordinate shift
-        int nx = t[i].first + cx;
-        int ny = t[i].second + cy;
-        //(nx,ny): torch point
-
-        // fill them
-        for (int dx = -2; dx <= 2; dx++) {
-          for (int dy = -2; dy <= 2; dy++) {
-            mapa[nx + dx][ny + dy] |= tl[dx + 2][dy + 2];
-          }
-        }
-      }
 #ifdef DEBUG
       puts("after filling glowstone");
       prtmap();
