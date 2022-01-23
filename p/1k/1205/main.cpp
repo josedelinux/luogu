@@ -40,6 +40,16 @@ bool ts2() {
   return true;
 }
 
+bool ts3() {
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) tmp[n - j + 1][i] = o[i][j];
+  }
+  for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= n; j++)
+      if (tmp[i][j] != t[i][j]) return false;
+  return true;
+}
+
 void select() {
   if (ts1()) {
     cout << 1 << endl;
@@ -47,6 +57,10 @@ void select() {
   }
   if (ts2()) {
     cout << 2 << endl;
+    return;
+  }
+  if (ts3()) {
+    cout << 3 << endl;
     return;
   }
 
