@@ -3,8 +3,8 @@ to tell if b and c are identical
 for(int i=1;i<=n;i++)
      for(int j=1;j<=n;j++)
      if(b[i][j]!=c[i][j])
-     return 0;
-     return 1;
+     return false;
+     return true;
 
 https://www.luogu.com.cn/blog/157767/solution-p1205
 */
@@ -21,7 +21,7 @@ char t[maxn + 1][maxn + 1];  // transformed
 char tmp[maxn + 1][maxn + 1];  // tmp
 
 // the first transfomation
-bool ts1() {
+bool ts1(void) {
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) tmp[j][n - i + 1] = o[i][j];
   }
@@ -31,7 +31,7 @@ bool ts1() {
   return true;
 }
 
-bool ts2() {
+bool ts2(void) {
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) tmp[n - i + 1][n - j + 1] = o[i][j];
   }
@@ -41,7 +41,7 @@ bool ts2() {
   return true;
 }
 
-bool ts3() {
+bool ts3(void) {
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) tmp[n - j + 1][i] = o[i][j];
   }
@@ -51,7 +51,7 @@ bool ts3() {
   return true;
 }
 
-bool ts4() {
+bool ts4(void) {
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) tmp[i][n - j + 1] = o[i][j];
   }
@@ -62,19 +62,27 @@ bool ts4() {
 }
 
 // combo
-bool ts5() {
+bool ts5(void) {
   for (int i = 1; i <= n; i++) {
     for (int j = 1; j <= n; j++) tmp[i][n - j + 1] = o[i][j];
   }
   // copy it as input
   for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= n; j++) o[i][j] = t[i][j];
+    for (int j = 1; j <= n; j++) o[i][j] = tmp[i][j];
   }
 
   if (ts1() || ts2() || ts3()) {
     return true;
   }
   return false;
+}
+
+// identical
+bool ts6(void) {
+  for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= n; j++)
+      if (o[i][j] != t[i][j]) return false;
+  return true;
 }
 
 void select() {
@@ -96,6 +104,10 @@ void select() {
   }
   if (ts5()) {
     cout << 5 << endl;
+    return;
+  }
+  if (ts6()) {
+    cout << 6 << endl;
     return;
   }
 
