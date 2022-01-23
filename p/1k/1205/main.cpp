@@ -10,6 +10,7 @@ https://www.luogu.com.cn/blog/157767/solution-p1205
 */
 #include <bits/stdc++.h>
 #define maxn 100
+#define DEBUG
 using namespace std;
 
 /*input*/
@@ -50,6 +51,32 @@ bool ts3() {
   return true;
 }
 
+bool ts4() {
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) tmp[i][n - j + 1] = o[i][j];
+  }
+  for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= n; j++)
+      if (tmp[i][j] != t[i][j]) return false;
+  return true;
+}
+
+// combo
+bool ts5() {
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) tmp[i][n - j + 1] = o[i][j];
+  }
+  // copy it as input
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) o[i][j] = t[i][j];
+  }
+
+  if (ts1() || ts2() || ts3()) {
+    return true;
+  }
+  return false;
+}
+
 void select() {
   if (ts1()) {
     cout << 1 << endl;
@@ -61,6 +88,14 @@ void select() {
   }
   if (ts3()) {
     cout << 3 << endl;
+    return;
+  }
+  if (ts4()) {
+    cout << 4 << endl;
+    return;
+  }
+  if (ts5()) {
+    cout << 5 << endl;
     return;
   }
 
