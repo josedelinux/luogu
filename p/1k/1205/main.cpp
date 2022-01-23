@@ -30,7 +30,15 @@ bool ts1() {
   return true;
 }
 
-bool ts2() {}
+bool ts2() {
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) tmp[n - i + 1][n - j + 1] = o[i][j];
+  }
+  for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= n; j++)
+      if (tmp[i][j] != t[i][j]) return false;
+  return true;
+}
 
 void select() {
   if (ts1()) {
