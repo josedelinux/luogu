@@ -49,8 +49,15 @@ int main() {
         strcpy(s, tmp);
       }
       case 4:
-
-        break;
+        char tmp[100];
+        scanf("%s", &tmp);
+        char *pos = strstr(s, tmp);
+        if (pos == NULL) {
+          printf("-1\n");
+        } else {
+          printf("%d\n", pos - s);
+        }
+        continue;
     }
     printf("%s\n", s);
   }
