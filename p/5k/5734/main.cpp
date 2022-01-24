@@ -18,20 +18,35 @@ int main() {
         strcat(s, str);
         break;
       case 2:
-        // cut b letter from pos a
-        int a, b;
-        scanf("%d %d", &a, &b);
+        // use block here to avoid 'crosses initialization'
+        // seriously, use 'if' as much as possibile, it looks better
+        {
+          // cut b letter from pos a
+          int a, b;
+          scanf("%d %d", &a, &b);
 
-        char tmp[50];
-        int ti = 0;  // tmp arr index
-        for (int j = a; j < b + a; j++) {
-          tmp[ti++] = s[j];
+          char tmp[50];
+          int ti = 0;  // tmp arr index
+          for (int j = a; j < b + a; j++) {
+            tmp[ti++] = s[j];
+          }
+          tmp[ti] = '\0';
+          strcpy(s, tmp);
         }
-        tmp[ti] = '\0';
-        strcpy(s, tmp);
+
         break;
       case 3:
-        // insert
+        // insert after the ath letter
+        // most nasty
+        int a;
+        char tmp[100];
+        char get[50];
+        scanf("%d %s", &a, &get);
+
+        strncpy(tmp, s, a);
+        strcat(tmp, get);
+        strcat(tmp, s + a);
+        strcpy(s, tmp);
         break;
     }
     printf("%s\n", s);
