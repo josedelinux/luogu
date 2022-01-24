@@ -20,6 +20,7 @@ int main() {
       case 2:
         // use block here to avoid 'crosses initialization'
         // seriously, use 'if' as much as possibile, it looks better
+        // so sick of breaks
         {
           // cut b letter from pos a
           int a, b;
@@ -33,7 +34,6 @@ int main() {
           tmp[ti] = '\0';
           strcpy(s, tmp);
         }
-
         break;
       case 3: {
         // insert after the ath letter
@@ -47,7 +47,7 @@ int main() {
         strcat(tmp, get);
         strcat(tmp, s + a);
         strcpy(s, tmp);
-      }
+      } break;
       case 4:
         char tmp[100];
         scanf("%s", &tmp);
