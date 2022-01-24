@@ -35,11 +35,11 @@ int main() {
         }
 
         break;
-      case 3:
+      case 3: {
         // insert after the ath letter
         // most nasty
         int a;
-        char tmp[100];
+        char tmp[100] = {0};
         char get[50];
         scanf("%d %s", &a, &get);
 
@@ -47,6 +47,9 @@ int main() {
         strcat(tmp, get);
         strcat(tmp, s + a);
         strcpy(s, tmp);
+      }
+      case 4:
+
         break;
     }
     printf("%s\n", s);
