@@ -21,10 +21,15 @@ int main() {
         // cut b letter from pos a
         int a, b;
         scanf("%d %d", &a, &b);
+
+        char tmp[50];
+        int ti = 0;  // tmp arr index
         for (int j = a; j < b + a; j++) {
-          putchar(s[j]);
+          tmp[ti++] = s[j];
         }
-        continue;
+        tmp[ti] = '\0';
+        strcpy(s, tmp);
+        break;
       case 3:
         // insert
         break;
