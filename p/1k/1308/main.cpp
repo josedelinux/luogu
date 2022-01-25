@@ -18,11 +18,12 @@ int main() {
   substr = ' ' + substr + ' ';
   str = ' ' + str + ' ';  // keep the count same since substr added
 
-  if (str.find(substr) == string::npos) {
+  int first = str.find(substr);
+
+  if (first == string::npos) {
     cout << -1 << endl;
   } else {
     int cnt = 0;
-    int first = str.find(substr);
     int tmp = first;
     while (tmp != string::npos) {
       cnt++;
