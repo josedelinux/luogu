@@ -1,0 +1,40 @@
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+#define maxn 1000000
+
+char substr[11];
+char str[100 + 1];
+
+int main() {
+  int vez = 0;  // times
+  scanf("%s", &substr);
+
+  // hail getline
+  int cnt = 0;  // str cnt
+  char ch;
+  while (isspace(ch = getchar())) {
+  }
+  ungetc(ch, stdin);
+  while ((ch = getchar()) != EOF) {
+    if (ch == '\n') break;
+    str[cnt++] = ch;
+  }
+
+  int nsub = strlen(substr);
+  for (int i = 0; i < nsub; i++) substr[i] = toupper(substr[i]);
+
+  int nstr = strlen(str);
+  for (int i = 0; i < nstr; i++) str[i] = toupper(str[i]);
+
+  // count times
+
+  char *pos = strstr(str, substr);
+  if (pos) {
+    printf("%d %d\n", vez, pos - str);
+  } else {  // NULL
+    printf("-1\n");
+  }
+  return 0;
+}
