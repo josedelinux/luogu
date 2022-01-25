@@ -5,7 +5,7 @@
 #define maxn 1000000
 
 char substr[11];
-char str[100 + 1];
+char str[maxn + 1];
 
 int main() {
   int vez = 0;  // times
@@ -30,14 +30,16 @@ int main() {
 
   // count times
   const char *result = str;
-  while ((result = strstr(result, substr)) != NULL) {
+
+  while ((result = strstr(result, substr)) != NULL && isspace(*(result - 1)) &&
+         isspace(*(result + 1))) {  // hard core judgement
     vez++;
     result++;
     // Increment result, otherwise we'll find target at the same location
   }
 
   char *pos = strstr(str, substr);
-  if (pos) {
+  if (pos && isspace(*(pos - 1)) && isspace(*(pos + 1))) {
     printf("%d %d\n", vez, pos - str);
   } else {  // NULL
     printf("-1\n");
