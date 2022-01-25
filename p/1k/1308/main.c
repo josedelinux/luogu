@@ -8,11 +8,12 @@ char substr[11];
 char str[maxn + 1];
 
 int main() {
-  int vez = 0;  // times
+  char *pos = NULL;  // first location
+  int vez = 0;       // times
+
   scanf("%s", &substr);
 
   // hail getline
-
   int cnt = 0;  // str cnt
   char ch = getchar();
   if (ch != '\n' && ch != '\r') {
@@ -35,17 +36,22 @@ int main() {
   for (int i = 0; i < nstr; i++) str[i] = toupper(str[i]);
 
   // count times
-  const char *result = str;
+  char *result = str;
 
-  while ((result = strstr(result, substr)) != NULL && isspace(*(result - 1)) &&
-         isspace(*(result + nsub))) {  // hard core judgement
-    vez++;
+  while ((result = strstr(result, substr)) != NULL) {
+    // hard core judgement
+    if (isspace(*(result - 1)) && isspace(*(result + nsub))) {
+      if (vez == 0) {
+        pos = result;  // get the first location
+      }
+      vez++;
+
+      // Increment result, otherwise we'll find target at the same location
+    }
     result++;
-    // Increment result, otherwise we'll find target at the same location
   }
 
-  char *pos = strstr(str, substr);
-  if (pos && isspace(*(pos - 1)) && isspace(*(pos + nsub))) {
+  if (pos) {
     printf("%d %d\n", vez, pos - str);
   } else {  // NULL
     printf("-1\n");
