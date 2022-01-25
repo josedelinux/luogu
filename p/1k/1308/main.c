@@ -12,12 +12,18 @@ int main() {
   scanf("%s", &substr);
 
   // hail getline
+
   int cnt = 0;  // str cnt
-  char ch;
-  while (isspace(ch = getchar())) {
+  char ch = getchar();
+  if (ch != '\n' && ch != '\r') {
+    ungetc(ch, stdin);
   }
-  ungetc(ch, stdin);
-  while ((ch = getchar()) != EOF) {
+  ch = getchar();
+  if (ch != '\n' && ch != '\r') {
+    ungetc(ch, stdin);
+  }
+
+  while ((ch = getchar()) != EOF && 1) {
     if (ch == '\n') break;
     str[cnt++] = ch;
   }
@@ -32,14 +38,14 @@ int main() {
   const char *result = str;
 
   while ((result = strstr(result, substr)) != NULL && isspace(*(result - 1)) &&
-         isspace(*(result + 1))) {  // hard core judgement
+         isspace(*(result + nsub))) {  // hard core judgement
     vez++;
     result++;
     // Increment result, otherwise we'll find target at the same location
   }
 
   char *pos = strstr(str, substr);
-  if (pos && isspace(*(pos - 1)) && isspace(*(pos + 1))) {
+  if (pos && isspace(*(pos - 1)) && isspace(*(pos + nsub))) {
     printf("%d %d\n", vez, pos - str);
   } else {  // NULL
     printf("-1\n");
