@@ -20,16 +20,17 @@ int main() {
 
   int n = str.size();
   for (int i = 0; i < n; i++) {
+    bool flag = true;
     if (isalpha(str[i])) {
       // find the position in alpha 2d array
-      for (int row = 1; row < 10; row++) {
-        for (int col = 0; col < 4; col++) {
+      for (int row = 1; flag && row < 10; row++) {
+        for (int col = 0; flag && col < 4; col++) {
           if (isalpha(alpha[row][col]) && str[i] == alpha[row][col]) {
             cnt = cnt + col + 1;
+            flag = false;
           }
         }
       }
-
     } else {
       cnt++;
     }
