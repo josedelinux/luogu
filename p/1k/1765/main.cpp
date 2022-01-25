@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
 char alpha[10][5] = {
     "",      // 1
     "abc",   // 2
@@ -31,7 +32,8 @@ int main() {
           }
         }
       }
-    } else {
+    }
+    if (str[i] == ' ') {
       cnt++;
     }
   }
