@@ -29,6 +29,12 @@ int main() {
   for (int i = 0; i < nstr; i++) str[i] = toupper(str[i]);
 
   // count times
+  const char *result = str;
+  while ((result = strstr(result, substr)) != NULL) {
+    vez++;
+    result++;
+    // Increment result, otherwise we'll find target at the same location
+  }
 
   char *pos = strstr(str, substr);
   if (pos) {
