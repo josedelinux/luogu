@@ -27,16 +27,12 @@ int main() {
       continue;
     } else if (cur == 'V' && next == 'K') {
       cnt++;
-    } else if (!flag && isalpha(cur) && isalpha(next)) {
-      /* 2 exception: VKV VKKVK
-       */
-      if (s[i - 1] == 'K' && s[i - 2] == 'V') {
-        // hace nada
-      } else if (s[i - 1] == 'V' && cur == 'K') {
-        // hace nada
-      } else {
-        flag = 1;
-      }
+      // disable them
+      s[i] = tolower(cur);
+      s[i + 1] = tolower(next);
+
+    } else if (!flag && isupper(cur) && isupper(next)) {
+      if (!islower(s[i - 1])) flag = 1;
     }
   }
 
