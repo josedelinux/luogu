@@ -28,10 +28,9 @@ int main() {
     } else if (cur == 'V' && next == 'K') {
       cnt++;
     } else if (!flag && isalpha(cur) && isalpha(next)) {
-      /* 2 exception: VKVVK VKKVK
+      /* 2 exception: VKV VKKVK
        */
-      if (s[i - 1] == 'K' && s[i - 2] == 'V' && s[i + 1] == 'V' &&
-          s[i + 2] == 'K') {
+      if (s[i - 1] == 'K' && s[i - 2] == 'V') {
         // hace nada
       } else if (s[i - 1] == 'V' && cur == 'K') {
         // hace nada
