@@ -8,6 +8,7 @@ kv(unchangeable)
 
 */
 #include <bits/stdc++.h>
+#define DEBUGn
 
 using namespace std;
 
@@ -22,20 +23,24 @@ int main() {
     int cur = s[i];
     int next = s[i + 1];
 
-    if (cur == 'K' && next == 'V') {
-      // ignore
-      continue;
-    } else if (cur == 'V' && next == 'K') {
+    if (cur == 'V' && next == 'K') {
       cnt++;
       // disable them
       s[i] = tolower(cur);
       s[i + 1] = tolower(next);
-
-    } else if (!flag && isupper(cur) && isupper(next)) {
-      if (!islower(s[i - 1])) flag = 1;
     }
   }
 
+  for (int i = 0; i < n - 1; i++) {
+    int cur = s[i];
+    int next = s[i + 1];
+
+    if (!islower(s[i]) && cur == next) flag = 1;
+  }
+#ifdef DEBUG
+  cout << "flag: " << flag << endl;
+#endif
   cout << cnt + flag << endl;
+
   return 0;
 }
