@@ -14,5 +14,5 @@
 | P5723 | [质数口袋](https://www.luogu.com.cn/problem/P5723)          |                     |      |        |
 | P1217 | [Prime Palindromes](https://www.luogu.com.cn/problem/P1217) |                     |      |        |
 | P1423 | 小玉在游泳                                                  |                     |      |        |
-| P1307 | [数字反转](https://www.luogu.com.cn/problem/P1307)          |                     |      |        |
+| P1307 | [数字反转](https://www.luogu.com.cn/problem/P1307)          | 常规int反转         |      |        |
 

@@ -57,7 +57,7 @@ int main() {
   std::string s;
   std::cin >> s;
   if (s.back() == '%') {
-    std::cout << reverse(s.substr(0, s.size() - 1));
+    std::cout << reverse(s.substr(0, s.size() - 1)) << "%" << std::endl;
     return 0;
   }
 
