@@ -21,7 +21,9 @@ s[i]=n/a%10,a*=10;//求出位数后存入数组，具体的就不说了 a=100000
 */
 
 #include <bits/stdc++.h>
+
 using namespace std;
+
 int main() {
   int n;
   int sign = 0;  // positive
