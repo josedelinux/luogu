@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+#define maxn 66
 
 map<string, int> m;
 
@@ -33,4 +34,28 @@ void init() {
   m["third"] = 3;
 }
 
-int main() { return 0; }
+int main() {
+  init();
+
+  string s;
+  int arr[maxn] = {0};  // for step 3
+  int cnt = 0;          // arr count
+
+  for (int i = 0; i < 6; i++) {
+    cin >> s;
+    if (m[s]) {
+      int t = m[s] * m[s] % 100;
+      if (t == 0) continue;
+      arr[cnt++] = t;
+    }
+  }
+  sort(arr, arr + cnt);
+
+  cout << arr[0];
+  for (int i = 1; i < cnt; i++) {
+    if (arr[i] < 10) cout << 0;
+    cout << arr[i];
+  }
+  cout << endl;
+  return 0;
+}
