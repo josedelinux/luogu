@@ -32,7 +32,7 @@ std::string reverse(std::string s) {
   // 范围 for 循环，用于统计前导零个数
   for (auto i : s) {
     if (i == '0')
-      ++zeroCount;
+      zeroCount++;
     else
       break;
   }
@@ -49,7 +49,7 @@ std::string deleteTail(std::string s) {
     else
       break;
   }
-  s.erase(s.end() - zeroCount);
+  s.erase(s.end() - zeroCount, s.end());
   return (s != "" ? s : "0");
 }
 
