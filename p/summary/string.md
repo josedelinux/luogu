@@ -7,7 +7,7 @@
 | 1553  | [数字反转（升级版）](https://www.luogu.com.cn/problem/P1553) | std::erase std::reverse |      | 模拟   |
 | P1603 | [斯诺登的密码](https://www.luogu.com.cn/problem/P1603)       |                         |      |        |
 | P1200 | [Your Ride Is Here](https://www.luogu.com.cn/problem/P1200)  | 常规                    | 1    |        |
-| P1597 | [语句解析](https://www.luogu.com.cn/problem/P1597)           | scanf()特性             | 5    |        |
+| P1597 | [语句解析](https://www.luogu.com.cn/problem/P1597)           | scanf()特性 map         | 5    |        |
 |       |                                                              |                         |      |        |
 |       |                                                              |                         |      |        |
 
