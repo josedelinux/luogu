@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define REDIn
 
-#define DEBUG
+#define DEBUGn
 #ifdef DEBUG
 #define REDI
 #endif
@@ -53,8 +53,8 @@ int main() {
   }
 
   // print histogram
-  for (int row = MAXROW - maxrow + 1; cnt > 0 && row <= MAXROW; row++) {
-    for (int col = 0; cnt > 0 && col < 26; col++) {
+  for (int row = MAXROW - maxrow + 1; row <= MAXROW; row++) {
+    for (int col = 0; col < 26; col++) {
       if (histogram[row][col] == '*') {
         printf("* ");
       } else if (histogram[row][col] == ' ') {
