@@ -39,11 +39,12 @@ int main() {
   cout << endl;
 #endif
 
+  // write to histogram
   for (int row = MAXROW; cnt > 0 && row >= MAXROW - maxrow; row--) {
     for (int col = 0; cnt > 0 && col < 26; col++) {
       if (m[col + 'A'] != 0) {
         histogram[row][col] = '*';
-        m[(col + 'A')]--;
+        m[col + 'A']--;
         cnt--;
       } else {
         histogram[row][col] = ' ';
