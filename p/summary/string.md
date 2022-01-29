@@ -8,6 +8,6 @@
 | P1603 | [斯诺登的密码](https://www.luogu.com.cn/problem/P1603)       |                         |      |        |
 | P1200 | [Your Ride Is Here](https://www.luogu.com.cn/problem/P1200)  | 常规                    | 1    |        |
 | P1597 | [语句解析](https://www.luogu.com.cn/problem/P1597)           | scanf()特性 map         | 5    |        |
-| P1598 | [垂直柱状图](https://www.luogu.com.cn/problem/P1598)         |                         |      |        |
+| P1598 | [垂直柱状图](https://www.luogu.com.cn/problem/P1598)         | 直方图,histogram        | 3    |        |
 |       |                                                              |                         |      |        |
 
