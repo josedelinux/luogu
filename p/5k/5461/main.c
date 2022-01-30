@@ -26,6 +26,7 @@ int main() {
   memset(square, 1, sizeof(square));
 
   pardon(n, 1, 1);
+
   // print square
   for (int row = 1; row <= n; row++) {
     for (int col = 1; col <= n; col++) {
