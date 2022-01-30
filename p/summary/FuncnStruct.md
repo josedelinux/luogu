@@ -7,7 +7,7 @@
 | P5737 | [闰年展示](https://www.luogu.com.cn/problem/P5737) | 闰年判断     | 3    | is_leap_year   |
 | P5738 | [歌唱比赛](https://www.luogu.com.cn/problem/P5738) |              | 0    |                |
 | P5739 | [计算阶乘](https://www.luogu.com.cn/problem/P5739) | memo         | 4    | factorial      |
-| P5461 | [赦免战俘](https://www.luogu.com.cn/problem/P5461) | 找规律，递归 | 5    |                |
+| P5461 | [赦免战俘](https://www.luogu.com.cn/problem/P5461) | 找规律，递归 | 5    | recursion      |
 |       |                                                    |              |      |                |
 |       |                                                    |              |      |                |
 |       |                                                    |              |      |                |
