@@ -3,20 +3,20 @@
 
 unsigned char square[1024][1024];
 
-void pardon(int length, int start, int end) {
+void pardon(int length, int posRow, int posCol) {
   if (length == 2) {  // Recursion Bounds
-    square[start][end] = 0;
+    square[posRow][posCol] = 0;
     return;
   }
 
-  for (int i = 1; i <= start + length / 2 - 1; i++) {
-    for (int j = end; j <= end + length / 2 - 1; j++) {
+  for (int i = 1; i <= posRow + length / 2 - 1; i++) {
+    for (int j = posCol; j <= posCol + length / 2 - 1; j++) {
       square[i][j] = 0;
     }
   }
-  pardon(length / 2, start + length / 2, end);
-  pardon(length / 2, start + length / 2, end + length / 2);
-  pardon(length / 2, start, end + length / 2);
+  pardon(length / 2, posRow + length / 2, posCol);
+  pardon(length / 2, posRow + length / 2, posCol + length / 2);
+  pardon(length / 2, posRow, posCol + length / 2);
 }
 
 int main() {
