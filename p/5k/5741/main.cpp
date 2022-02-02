@@ -48,9 +48,9 @@ int main() {
     for (int j = i + 1; j < n; j++) {
       if (is_even(stu[i], stu[j])) {
         if (stu[i].Name > stu[j].Name)
-          printf("%s %s\n", stu[i].Name, stu[j].Name);
-        else
           printf("%s %s\n", stu[j].Name, stu[i].Name);
+        else
+          printf("%s %s\n", stu[i].Name, stu[j].Name);
       }
     }
   }
