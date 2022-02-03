@@ -15,6 +15,6 @@
 | P1304 | [哥德巴赫猜想](https://www.luogu.com.cn/problem/P1304)       | 筛法,质数        | 3    | Prime           |
 | P1217 | [回文质数 Prime Palindromes](https://www.luogu.com.cn/problem/P1217) | 回文数,质数      | 5    | palindrome      |
 | P2415 | [集合求和](https://www.luogu.com.cn/problem/P2415)           | 找规律，排列组合 | 5    |                 |
-| P5743 | [猴子吃桃](https://www.luogu.com.cn/problem/P5743)           |                  |      |                 |
-| P5744 | [培训](https://www.luogu.com.cn/problem/P5744)               |                  |      |                 |
+| P5743 | [猴子吃桃](https://www.luogu.com.cn/problem/P5743)           | 逆向思维         | 1    | math            |
+| P5744 | [培训](https://www.luogu.com.cn/problem/P5744)               | struct           | 0    |                 |
 

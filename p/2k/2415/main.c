@@ -7,6 +7,8 @@ https://www.luogu.com.cn/blog/_post/23844
 [1 2 3 4]
 sum = (1+ 2+ 3+ 4)*2^(4-1)
 发现规律 输入元素和*2^(n-1)
+
+https://www.luogu.com.cn/blog/_post/12397
 */
 
 #include <math.h>
