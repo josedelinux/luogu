@@ -1,6 +1,6 @@
 | id    | Title                                                        | Techniques |      | tags |
 | ----- | ------------------------------------------------------------ | ---------- | ---- | ---- |
-| P2241 | [统计方形（数据加强版）](https://www.luogu.com.cn/problem/P2241) | math       | 5    |      |
+| P2241 | [统计方形（数据加强版）](https://www.luogu.com.cn/problem/P2241) | 数矩形     | 5    |      |
 | P2089 | [烤鸡](https://www.luogu.com.cn/problem/P2089)               |            |      |      |
 |       |                                                              |            |      |      |
 |       |                                                              |            |      |      |
