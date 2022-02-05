@@ -4,11 +4,8 @@ https://www.luogu.com.cn/blog/_post/111055
 No tengo ni idea
 */
 #include <bits/stdc++.h>
-#define MAX_N 5000
 
 using namespace std;
-
-unsigned char map[MAX_N + 1][MAX_N + 1];
 
 int main() {
   int n, m;
