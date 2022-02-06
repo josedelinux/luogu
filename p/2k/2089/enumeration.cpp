@@ -3,6 +3,7 @@ https://www.luogu.com.cn/blog/_post/11218
 */
 #include <iostream>
 using namespace std;
+
 int main() {
   int a, b, c, d, e, f, g, h, i, j, in, x = 0;
   cin >> in;
@@ -62,4 +63,5 @@ int main() {
       }
     }
   }
+  return 0;
 }
