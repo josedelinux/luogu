@@ -11,12 +11,16 @@ https://www.luogu.com.cn/blog/_post/11224
 char ans[114514];
 int ingrediant[maxn];  // 当前调料
 int cnt = 0;           // 方案数
+char* anscur = ans;
 
 void printans() {
+  int offset;
   for (int i = 0; i < 10; i++) {
-    sprintf(ans + strlen(ans), "%d ", ingrediant[i]);
+    sprintf(anscur, "%d %n", ingrediant[i], &offset);
+    anscur += offset;
   }
-  sprintf(ans + strlen(ans), "\n");
+  sprintf(anscur, "\n%n", &offset);
+  anscur += offset;
 }
 
 // 深搜
