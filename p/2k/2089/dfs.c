@@ -1,4 +1,5 @@
 /*
+还有优化
 https://www.luogu.com.cn/blog/_post/11224
 */
 #include <ctype.h>
