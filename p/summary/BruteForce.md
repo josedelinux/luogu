@@ -3,7 +3,7 @@
 | id    | Title                                                        | Techniques       |      | tags |
 | ----- | ------------------------------------------------------------ | ---------------- | ---- | ---- |
 | P2241 | [统计方形（数据加强版）](https://www.luogu.com.cn/problem/P2241) | 数矩形           | 5    |      |
-| P2089 | [烤鸡](https://www.luogu.com.cn/problem/P2089)               |                  |      |      |
+| P2089 | [烤鸡](https://www.luogu.com.cn/problem/P2089)               | dfs,枚举         | 5    |      |
 | P1618 | [三连击（升级版）](https://www.luogu.com.cn/problem/P1618)   | next_permutation | 5    |      |
 |       |                                                              |                  |      |      |
 |       |                                                              |                  |      |      |
