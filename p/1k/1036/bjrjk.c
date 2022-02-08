@@ -10,6 +10,7 @@ int arr[20];
 
 // simplest method
 bool isPrime(int n) {
+  if (n == 0 || n == 1) return false;
   int end = sqrt((double)n);
   for (int i = 2; i <= end; i++) {
     if (n % i == 0) return false;
