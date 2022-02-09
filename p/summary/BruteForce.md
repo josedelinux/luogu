@@ -6,7 +6,7 @@
 | P2089 | [烤鸡](https://www.luogu.com.cn/problem/P2089)               | dfs,枚举,%n,sprintf,queue | 5    |      |
 | P1618 | [三连击（升级版）](https://www.luogu.com.cn/problem/P1618)   | next_permutation          | 5    |      |
 | P1036 | [选数](https://www.luogu.com.cn/problem/P1036)               | dfs,recursion             | 5    |      |
-| P1157 | [组合的输出](https://www.luogu.com.cn/problem/P1157)         | next_permutation,dfs      | 5    |      |
+| P1157 | [组合的输出](https://www.luogu.com.cn/problem/P1157)         | next_permutation,dfs,排列 | 5    |      |
 |       |                                                              |                           |      |      |
 |       |                                                              |                           |      |      |
 |       |                                                              |                           |      |      |
