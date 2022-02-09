@@ -12,7 +12,7 @@ int main() {
                  11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
   int n, r;
   cin >> n >> r;
-  string last;
+  string last = "";
   do {
     bool skip = false;
     // check if the latter is greater than before, if so, skip
@@ -22,13 +22,20 @@ int main() {
       }
     }
 
+    string cur = "";
     if (!skip && 1) {
       for (int i = 0; i < r; i++) {
-        cout << "  " << arr[i];
+        // cout << "  " << arr[i];
+        cur = cur + "  " + (char)(arr[i] + '0');
       }
-      cout << endl;
+      // cout << endl;
+      cur = cur + '\n';
     }
 
+    if (last != cur) {
+      cout << cur;
+    }
+    last = cur;
   } while (next_permutation(arr, arr + n));
 
   return 0;
