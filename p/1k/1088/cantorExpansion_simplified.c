@@ -7,7 +7,6 @@ https://www.luogu.com.cn/blog/_post/71942
 #include <string.h>
 
 #define MAX_N 10005
-#define MAX_N 100
 
 int arr[MAX_N];
 bool used[MAX_N];
