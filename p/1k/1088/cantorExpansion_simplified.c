@@ -1,4 +1,5 @@
 /*
+https://www.dcode.fr/cantor-expansion
 https://www.luogu.com.cn/blog/_post/71942
 利用康托展开的原理，简化而来的代码
 */
