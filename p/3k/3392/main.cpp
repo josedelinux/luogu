@@ -15,6 +15,7 @@ https://www.luogu.com.cn/blog/_post/56758
 枚举i,j，取最小值即可
 */
 
+#include <algorithm>
 #include <iostream>
 
 #define MAX_N 50
