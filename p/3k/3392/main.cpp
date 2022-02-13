@@ -1,6 +1,7 @@
 /*
 想不出来
 https://www.luogu.com.cn/blog/_post/56758
+O(n*n+nm)
 
 开数组w[i],b[i],r[i]，分别表示把前i行涂成白、蓝、红需要涂的格子数
 
@@ -22,6 +23,7 @@ https://www.luogu.com.cn/blog/_post/56758
 
 using namespace std;
 
+int ans = 0x7fffffff;
 int N, M;
 int w[MAX_N + 1], b[MAX_N + 1], r[MAX_N + 1];
 
@@ -35,7 +37,6 @@ inline int check(char c) {
 }
 
 int main(int argc, char* argv[]) {
-  int ans = 0x7fffffff;
   cin >> N >> M;
   for (int row = 1; row <= N; row++) {
     cin >> s;
