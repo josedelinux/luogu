@@ -9,8 +9,8 @@
 | P1157 | [组合的输出](https://www.luogu.com.cn/problem/P1157)         | next_permutation,dfs,排列          | 5    |      |
 | P1706 | [全排列问题](https://www.luogu.com.cn/problem/P1706)         | next_permutation,dfs               | 4    |      |
 | P1088 | [火星人](https://www.luogu.com.cn/problem/P1088)             | 组合数学,康托展开,next_permutation | 4    |      |
-| P3392 | [涂国旗](https://www.luogu.com.cn/problem/P3392)             | 暴力,分界                          |      |      |
-|       |                                                              |                                    |      |      |
+| P3392 | [涂国旗](https://www.luogu.com.cn/problem/P3392)             | 暴力,分界                          | 5    |      |
+| P3654 | [First Step](https://www.luogu.com.cn/problem/P3654)         | 行列连续搜索                       | 5    |      |
 |       |                                                              |                                    |      |      |
 |       |                                                              |                                    |      |      |
 |       |                                                              |                                    |      |      |
