@@ -2,7 +2,7 @@
 
 | id    | Title                                                | Techniques |      | tags |
 | ----- | ---------------------------------------------------- | ---------- | ---- | ---- |
-| P1271 | [选举学生会](https://www.luogu.com.cn/problem/P1271) |            |      |      |
+| P1271 | [选举学生会](https://www.luogu.com.cn/problem/P1271) | std::sort  | 0    |      |
 |       |                                                      |            |      |      |
 |       |                                                      |            |      |      |
 |       |                                                      |            |      |      |
