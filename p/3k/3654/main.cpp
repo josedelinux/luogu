@@ -1,5 +1,6 @@
 /*
 没思路
+https://en.wikipedia.org/wiki/Dutch_national_flag_problem
 https://www.luogu.com.cn/blog/_post/228737
 
 从每一个点开始,横向和竖向搜索k位,如果其中没有任何
