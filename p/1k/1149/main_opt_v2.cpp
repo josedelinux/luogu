@@ -1,7 +1,6 @@
 /*
 condition:
-    cost[a]+cost[b]+cost[c]=n
-    a+b=c
+    cost[a]+cost[b]+cost[a+b]=n
 todo 优化算法
 */
 
