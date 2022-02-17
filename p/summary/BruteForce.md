@@ -13,7 +13,7 @@
 | P3654 | [First Step](https://www.luogu.com.cn/problem/P3654)         | 行列连续搜索                       | 5    |      |
 | P1217 | [回文质数 Prime Palindromes](https://www.luogu.com.cn/problem/P1217) | sieve,palindrome                   | 5    |      |
 | P1149 | [火柴棒等式](https://www.luogu.com.cn/problem/P1149)         | dfs,暴力,打表                      | 5    |      |
-|       |                                                              |                                    |      |      |
+| P3799 | [妖梦拼木棒](https://www.luogu.com.cn/problem/P3799)         | 组合数学,暴力枚举                  | 5    |      |
 |       |                                                              |                                    |      |      |
 |       |                                                              |                                    |      |      |
 
