@@ -1,25 +1,27 @@
 <h1 style="color:blue;text-align:center;">我的算法模板</h1>
 
-| Name      | Tag   | Importance |      |      |
-| --------- | ----- | ---------- | ---- | ---- |
-| 1艾氏筛法 | prime |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
-|           |       |            |      |      |
+| Name      | Tag   | Applications | Importance |      |
+| --------- | ----- | ------------ | ---------- | ---- |
+| 1艾氏筛法 | prime |              |            |      |
+| 2GCD      | GCD   | 约分         |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
+|           |       |              |            |      |
 
-
+---
 
 ### 1 艾氏筛法(sieve of Eratosthenes)
+
+
 
 ```c++
 bool is_prime[MAX_N];  
@@ -37,9 +39,11 @@ void primeGen(int n) {
 }
 ```
 
+---
 
+### 2 GCD(Euclidean algorithm)
 
-### 2 GCD
+#### Applications: 约分(reduction of a fraction)
 
 ```c++
 int GCD(int a, int b) {
@@ -51,5 +55,5 @@ int GCD(int a, int b) {
 }
 ```
 
-
+---
 
