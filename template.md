@@ -1,21 +1,21 @@
 <h1 style="color:blue;text-align:center;">我的算法模板</h1>
 
-| Name      | Tag   | Applications | Importance |      |
-| --------- | ----- | ------------ | ---------- | ---- |
-| 1艾氏筛法 | prime |              |            |      |
-| 2GCD      | GCD   | 约分         |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
-|           |       |              |            |      |
+| Name      | Tag          | Applications | Importance |      |
+| --------- | ------------ | ------------ | ---------- | ---- |
+| 1艾氏筛法 | prime        |              |            |      |
+| 2GCD      | GCD,LCM      | 约分         |            |      |
+| 3闰年判断 | is_leap_year |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
+|           |              |              |            |      |
 
 ---
 
@@ -46,6 +46,13 @@ void primeGen(int n) {
 #### Applications: 约分(reduction of a fraction)
 
 ```c++
+#include <numeric>
+std::gcd
+```
+
+
+
+```c++
 int GCD(int a, int b) {
   if (a % b == 0) {
     return b;
@@ -53,7 +60,31 @@ int GCD(int a, int b) {
     return GCD(b, a % b);
   }
 }
+inline int lcm(int a,int b){
+    return a / gcd(a,b) *b; //avoid overflow
+}
 ```
 
 ---
+
+### 3 is_leap_year
+
+```c++
+int is_leap_year(int y) {
+  if (y % 4 == 0) {
+    if (y % 100 != 0) {
+      return true;
+    } else if (y % 400 == 0) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+```c++
+int is_leap_year(int y) {
+	return ((y % 400 == 0) || (y % 4 == 0 && y % 100 != 0));
+}
+```
 
