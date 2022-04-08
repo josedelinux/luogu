@@ -19,7 +19,7 @@ int main() {
 int search(int s, int t) {
   int i;
   for (i = a[t - 1]; i <= s; i++)
-    if (i < n)  //当前数i要大于等于前一位数，且不超过n
+    if (i < n)  //当前数i要大于等于前一位数s，且不超过n
     {
       a[t] = i;  //保存当前拆分的数i
       s -= i;    // s减去数i，s的值将继续拆分
