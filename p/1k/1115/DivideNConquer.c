@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define MAX(a, b) ((a > b) ? (a) : (b))
 
-#define MAX_N (20000 + 7)
+#define MAX_N (200000 + 7)
 
 /*
 T(N) = 2T(N^2) + c(n)
