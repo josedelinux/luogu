@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define MAX(a, b) ((a > b) ? (a) : (b))
 
-#define MAX_N (100000 + 7)
+#define MAX_N (20000 + 7)
 
 /*
 T(N) = 2T(N^2) + c(n)
@@ -49,6 +49,7 @@ int DivideConquer(int data[], int left, int right) {
 int n, a[MAX_N];
 
 int main() {
+  freopen("P1115_3.in", "r", stdin);
   scanf("%d", &n);
   for (int i = 0; i < n; i++) {
     scanf("%d", &a[i]);
