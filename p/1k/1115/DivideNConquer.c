@@ -49,7 +49,7 @@ int DivideConquer(int data[], int left, int right) {
 int n, a[MAX_N];
 
 int main() {
-  freopen("P1115_3.in", "r", stdin);
+  // freopen("P1115_3.in", "r", stdin);
   scanf("%d", &n);
   for (int i = 0; i < n; i++) {
     scanf("%d", &a[i]);
