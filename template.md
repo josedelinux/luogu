@@ -5,7 +5,7 @@
 | 1艾氏筛法 | prime        |              |            |      |
 | 2GCD      | GCD,LCM      | 约分         |            |      |
 | 3闰年判断 | is_leap_year |              |            |      |
-|           |              |              |            |      |
+| 4快速幂   | fast_pow     |              |            |      |
 |           |              |              |            |      |
 |           |              |              |            |      |
 |           |              |              |            |      |
@@ -53,6 +53,7 @@ std::gcd
 
 
 ```c++
+//b!=0
 int GCD(int a, int b) {
   if (a % b == 0) {
     return b;
@@ -60,10 +61,28 @@ int GCD(int a, int b) {
     return GCD(b, a % b);
   }
 }
+
+int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
+
 inline int lcm(int a,int b){
     return a / gcd(a,b) *b; //avoid overflow
 }
 ```
+
+---
+### 4快速幂
+```c++
+LL fast_power(LL a,LL k,int q){
+	LL ans=1;
+	while(k){
+		if(k&1) ans = ans * a % q;
+		k>>1;
+		a= a * a % q;
+	}
+	return ans;
+}
+```
+
 
 ---
 
@@ -87,4 +106,22 @@ int is_leap_year(int y) {
 	return ((y % 400 == 0) || (y % 4 == 0 && y % 100 != 0));
 }
 ```
+
+---
+
+### 4快速幂
+
+```
+// C++ Version
+long long binpow(long long a, long long b) {
+  if (b == 0) return 1;
+  long long res = binpow(a, b / 2);
+  if (b % 2)
+    return res * res * a;
+  else
+    return res * res;
+}
+```
+
+---
 
